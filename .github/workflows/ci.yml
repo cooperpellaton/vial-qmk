@@ -12,6 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        set-safe-directory: true
 
     - name: Verify Vial UID is unique
       run: python3 util/ci_vial_verify_uid.py
